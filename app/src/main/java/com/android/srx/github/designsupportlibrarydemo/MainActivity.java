@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
 	public void gotoFAB(View view) {
 		startActivity(new Intent(this,FloatingActionButtonActivity.class));
 	}
+
+	public void gotoSnackbar(View view) {
+		startActivity(new Intent(this,SnackbarActivity.class));
+	}
 }
