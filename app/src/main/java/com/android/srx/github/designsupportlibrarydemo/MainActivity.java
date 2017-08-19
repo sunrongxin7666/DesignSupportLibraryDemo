@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
 	public void gotoSnackbar(View view) {
 		startActivity(new Intent(this,SnackbarActivity.class));
 	}
+
+	public void gotoNavigationView(View view) {
+		startActivity(new Intent(this,NavigationViewActivity.class));
+	}
 }

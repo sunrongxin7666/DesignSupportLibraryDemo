@@ -20,6 +20,9 @@
         </activity>
         <activity android:name=".SnackbarActivity">
         </activity>
+        <activity android:name=".NavigationViewActivity"
+            android:theme="@style/Base.Theme.DesignDemo">
+        </activity>
     </application>
 
 </manifest>
