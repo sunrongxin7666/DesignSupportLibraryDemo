@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
 	public void gotoNavigationView(View view) {
 		startActivity(new Intent(this,NavigationViewActivity.class));
 	}
+
+	public void gotoTabLayout(View view) {
+		startActivity(new Intent(this,TabLayoutActivity.class));
+	}
 }

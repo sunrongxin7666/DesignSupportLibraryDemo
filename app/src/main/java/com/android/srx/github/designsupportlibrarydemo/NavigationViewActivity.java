@@ -145,7 +145,7 @@ public class NavigationViewActivity extends AppCompatActivity {
 
 	protected void closeNavDrawer() {
 		if (mDrawerLayout != null) {
-			mDrawerLayout.closeDrawer(GravityCompat.START);
+			mDrawerLayout.closeDrawer(GravityCompat.END);
 		}
 	}
 
@@ -163,7 +163,7 @@ public class NavigationViewActivity extends AppCompatActivity {
 		switch (id) {
 			//当点击Toolbar的图标时
 			case android.R.id.home:
-				mDrawerLayout.openDrawer(GravityCompat.START);
+				mDrawerLayout.openDrawer(GravityCompat.END);
 				return true;
 
 			case R.id.action_settings:
