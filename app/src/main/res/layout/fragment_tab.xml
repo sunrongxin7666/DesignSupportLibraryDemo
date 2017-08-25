@@ -1,16 +1,17 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.android.srx.github.designsupportlibrarydemo.fragment.TabBlankFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="horizontal"
+              tools:context="com.android.srx.github.designsupportlibrarydemo.fragment.TabBlankFragment">
 
     <TextView
-        android:gravity="center"
         android:id="@+id/tv_in_tab_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="3px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment"
         android:textColor="@color/colorAccent"
-        android:text="@string/hello_blank_fragment"/>
+        android:textSize="30dp"/>
 
-</FrameLayout>
+</LinearLayout>

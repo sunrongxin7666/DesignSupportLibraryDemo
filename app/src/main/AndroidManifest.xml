@@ -24,8 +24,7 @@
             android:name=".NavigationViewActivity"
             android:theme="@style/Base.Theme.DesignDemo">
         </activity>
-        <activity android:name=".TabLayoutActivity"
-            android:theme="@style/Base.Theme.DesignDemo">
+        <activity android:name=".TabLayoutActivity">
         </activity>
     </application>
 
