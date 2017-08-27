@@ -8,31 +8,39 @@
     android:orientation="vertical"
     tools:context="com.android.srx.github.designsupportlibrarydemo.TabLayoutActivity">
 
+    <!--AppBarLayout 顶部栏布局 其本质是垂直方向的LinearLayout-->
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <!--ToolBar和TabLayout作为顶部栏的一部分,ToolBar在本章的内容并不是必须的可以忽略-->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_scrollFlags="scroll|enterAlways"
             android:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+        <!--TabLayout被设置为可滑动的，可以设置为固定的fixed-->
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@color/colorAccent"
-            app:tabMode="scrollable"/>
+            app:tabMode="fixed"/>
     </android.support.design.widget.AppBarLayout>
+
+    <!--协作布局，本质等同于FrameLayout，用于和SnackBar效果配合-->
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1">
+
+        <!--用于加载Fragment-->
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+        <!--浮动按钮，用来体现ViewPager的滑动效果-->
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnFloatingAction"
             android:layout_width="wrap_content"
@@ -46,6 +54,7 @@
             app:elevation="12dp"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
     </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

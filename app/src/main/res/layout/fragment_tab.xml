@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:gravity="center"
               android:orientation="horizontal"
-              tools:context="com.android.srx.github.designsupportlibrarydemo.fragment.TabBlankFragment">
+              tools:context="com.android.srx.github.designsupportlibrarydemo.fragment.TabFragment">
 
     <TextView
         android:id="@+id/tv_in_tab_fragment"

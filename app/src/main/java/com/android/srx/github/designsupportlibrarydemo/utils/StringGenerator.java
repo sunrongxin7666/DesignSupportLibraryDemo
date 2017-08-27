@@ -24,7 +24,7 @@ public class StringGenerator implements Generator<String> {
 		return preString+(index++);
 	}
 
-	public List<String> generate(int size){
+	public List<String> generateList(int size){
 		if(size<1){
 			return null;
 		}

@@ -13,13 +13,13 @@ import com.android.srx.github.designsupportlibrarydemo.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabBlankFragment extends android.support.v4.app.Fragment {
+public class TabFragment extends android.support.v4.app.Fragment {
 
 
-	private String title;
+	private String words;
 	private TextView mTextView;
 
-	public TabBlankFragment() {
+	public TabFragment() {
 		// Required empty public constructor
 	}
 
@@ -34,15 +34,15 @@ public class TabBlankFragment extends android.support.v4.app.Fragment {
 
 	private void findView(View view) {
 		mTextView = (TextView) view.findViewById(R.id.tv_in_tab_fragment);
-		mTextView.setText(title);
+		mTextView.setText(words);
 	}
 
-	public String getTitle() {
-		return title;
+	public String getWords() {
+		return words;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setWords(String words) {
+		this.words = words;
 	}
 
 }

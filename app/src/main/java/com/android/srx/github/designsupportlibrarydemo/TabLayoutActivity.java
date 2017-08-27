@@ -9,10 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 
-import com.android.srx.github.designsupportlibrarydemo.fragment.TabBlankFragment;
+import com.android.srx.github.designsupportlibrarydemo.fragment.TabFragment;
 import com.android.srx.github.designsupportlibrarydemo.utils.StringGenerator;
 
 import java.util.ArrayList;
@@ -37,6 +36,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 		initView();
 	}
 
+	//初始Activity中的各种View
 	private void initView() {
 		mViewPager = (ViewPager) findViewById(R.id.viewpager);
 		mTabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -59,6 +59,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 		initViewPager();
 	}
 
+	//初始化ViewPager
 	private void initViewPager() {
 		initData();
 
@@ -74,7 +75,6 @@ public class TabLayoutActivity extends AppCompatActivity {
 
 			@Override
 			public void onPageSelected(int position) {
-				//Log.e(TAG, "onPageSelected: "+position);
 				if(position==0){
 					mActionButton.setVisibility(View.GONE);
 				} else {
@@ -88,7 +88,8 @@ public class TabLayoutActivity extends AppCompatActivity {
 			}
 		});
 
-		//设置配置器 ViewPager是ViewGroup
+		//为ViewPager设置配置器,设定Fragment和title的关系
+		//设置不同Fragment对应不同的Title
 		mViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
 			@Override
 			public Fragment getItem(int position) {
@@ -106,7 +107,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 			}
 		});
 
-		//绑定
+		//将ViewPage绑定到TabLayout
 		mTabLayout.setupWithViewPager(mViewPager);
 
 		//去掉ActionBar的渐进阴影
@@ -114,14 +115,18 @@ public class TabLayoutActivity extends AppCompatActivity {
 		getSupportActionBar().setElevation(0);
 	}
 
+	//初始化待显示的数据
 	private void initData() {
-		mTitles = new StringGenerator("title").generate(mSize);
-		mWords = new StringGenerator("Fragment").generate(mSize);
+		//初始化Tab标签
+		mTitles = new StringGenerator("title").generateList(mSize);
+		//初始化Fragment中显示提示词
+		mWords = new StringGenerator("Fragment").generateList(mSize);
 
+		//初始化待放入View中的Fragment
 		mFragments = new ArrayList<>();
 		for (int i = 0; i < mSize; i++) {
-			TabBlankFragment fragment = new TabBlankFragment();
-			fragment.setTitle(mWords.get(i));
+			TabFragment fragment = new TabFragment();
+			fragment.setWords(mWords.get(i));
 			mFragments.add(fragment);
 		}
 	}
