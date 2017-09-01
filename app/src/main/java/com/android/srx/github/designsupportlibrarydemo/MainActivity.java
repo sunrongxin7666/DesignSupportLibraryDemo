@@ -28,4 +28,8 @@ public class MainActivity extends AppCompatActivity {
 	public void gotoTabLayout(View view) {
 		startActivity(new Intent(this,TabLayoutActivity.class));
 	}
+
+	public void gotoCoordinatorLayout(View view) {
+		startActivity(new Intent(this,CoordinatorLayoutActivity.class));
+	}
 }
