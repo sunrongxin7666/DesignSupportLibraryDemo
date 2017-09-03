@@ -6,13 +6,10 @@
               android:orientation="horizontal"
               tools:context="com.android.srx.github.designsupportlibrarydemo.fragment.TabFragment">
 
-    <TextView
-        android:id="@+id/tv_in_tab_fragment"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_in_frag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="30dp"/>
+        android:textColor="@color/colorAccent"/>
 
 </LinearLayout>

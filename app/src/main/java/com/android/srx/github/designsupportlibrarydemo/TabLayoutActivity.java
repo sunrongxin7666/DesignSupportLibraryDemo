@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.android.srx.github.designsupportlibrarydemo.fragment.ListFragment;
 import com.android.srx.github.designsupportlibrarydemo.fragment.TabFragment;
 import com.android.srx.github.designsupportlibrarydemo.utils.StringGenerator;
 
@@ -125,6 +126,10 @@ public class TabLayoutActivity extends AppCompatActivity {
 		//初始化待放入View中的Fragment
 		mFragments = new ArrayList<>();
 		for (int i = 0; i < mSize; i++) {
+			if(i==0){
+				mFragments.add(new ListFragment());
+				continue;
+			}
 			TabFragment fragment = new TabFragment();
 			fragment.setWords(mWords.get(i));
 			mFragments.add(fragment);
