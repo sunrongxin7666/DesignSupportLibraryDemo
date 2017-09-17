@@ -32,4 +32,9 @@ public class MainActivity extends AppCompatActivity {
 	public void gotoCoordinatorLayout(View view) {
 		startActivity(new Intent(this,CoordinatorLayoutActivity.class));
 	}
+
+
+	public void gotoTextInputLayout(View view) {
+		startActivity(new Intent(this,TextInputLayoutActivity.class));
+	}
 }
